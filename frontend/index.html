@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back to Top Button and Nav to Sandwich menu</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/mobile.css">
+</head>
+<header class="header">Strictly for Educational purposes</header>
+
+<body>
+
+    <div class="nav">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle">
+        <div class="menu">
+            <a href="/" class="nav__link" data-link>Dashboard</a>
+            <a href="/posts" class="nav__link" data-link>Posts</a>
+            <a href="/settings" class="nav__link" data-link>Settings</a>
+        </div>
+
+    </div>
+    <div id="app">
+
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script type="module" src="/static/js/index.js"></script>
+
+    <script>
+
+        // Back To Top Button
+        
+        mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+</body>
+<footer class="footer">
+    © February Y2022. Content is available for educational purposes only.
+</footer>
+
+</html>
